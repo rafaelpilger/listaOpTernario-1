@@ -6,12 +6,20 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
+    const precoCombus = parseFloat(prompt("Insira o preço do combustível").trim().replace(",", "."));
+  const litroTrab = parseFloat(prompt("Insira o quanto de combustível você utiliza para ir ao trabalho diariamente:").trim().replace(",", "."));
+  const precoPub1 = parseFloat(prompt("Insira o preço do transporte público que você paga ao ir para o trabalho diariamente:").trim().replace(",", "."));
 
+  //Processamento
+  let transporte = precoPub1 * 2;
+  let precoDiario = precoCombus * (litroTrab * 2); 
+  let mensagem = ""
+  mensagem = (precoDiario > transporte) ? `É mais barato você ir de transporte público, preço do transporte público = R$ ${transporte.toFixed(2).replace(".", ",")} preço para ir de carro = R$ ${precoDiario.toFixed(2).replace(".", ",")}` :
+    mensagem = (transporte > precoDiario) ? `É mais barato você ir de carro, preço para ir de carro = R$ ${precoDiario.toFixed(2).replace(".", ",")} preço do tranporte público = R$ ${transporte.toFixed(2).replace(".", ",")}` :
+      mensagem = (transporte == precoDiario) ? `Os dois possuem o mesmo preço, preço: R$ ${precoDiario.toFixed(2).replace(".", ",")} e R$ ${transporte.toFixed(2).replace(".", ",")}` : mensagem = "Dados inválidos.";
 
-    //Processamento
-
-    
-    //Saída
+  //Saída
+  alert(mensagem);
 
     
 </script>

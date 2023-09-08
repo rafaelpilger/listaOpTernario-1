@@ -5,10 +5,13 @@
 
     //Entrada
 
+    const caractere =prompt("insira uma letra!").trim().toUpperCase()
+
 
     //Processamento
-
+     let final = (caractere == "A" || caractere == "E" || caractere == "I" || caractere == "O" || caractere == "U")  ? `Está letra é uma vogal`
+     : `Está letra não é uma vogal`
     
     //Saída
-
+    alert(final)
 </script>

@@ -10,11 +10,18 @@
     // Entre 5.9 e zero            E
 
     //Entrada
+    const Nota = parseFloat(prompt('Insira qual nota você tirou').trim().replace(",", "."))
 
+//Processamento
 
-    //Processamento
+let mensagem = (Nota >= 9 && Nota <= 10) ? `Seu conceito foi A`
+    : (Nota <= 8.9 && Nota >= 8) ? `Seu conceito foi B `
+        : (Nota <= 7.9 && Nota >= 7) ? `Seu conceito foi C`
+            : (Nota <= 6.9 && Nota >= 6) ? `Seu conceito foi D`
+                : `Seu conceito foi E`
+
+//Saída
+alert(`${mensagem}`)
 
     
-    //Saída
-
 </script>

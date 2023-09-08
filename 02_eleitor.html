@@ -5,10 +5,13 @@
 
     //Entrada
 
+    const ano = Number(prompt("Em que ano voce nasceu"))
+    const atual = new Date().getFullYear()
+    const final = (atual-ano);
 
     //Processamento
-
+    let final2 = (final >= 16) ? `vc ja pode votal` : `vc nao pode votal`
 
     //Saída
-
+    alert(final2)
 </script>

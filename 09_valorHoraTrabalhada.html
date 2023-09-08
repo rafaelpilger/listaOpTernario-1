@@ -8,9 +8,16 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const hora = parseFloat(prompt("Insira quantas horas você trabalha na semana:").trim().replace(",","."));
+    const horasTrabalhada = parseFloat(prompt("Insira quanto você recebe por hora trabalhada:").trim().replace(",","."));
 
     //Processamento
+    let dinheiro = ((hora / 7) * horasTrabalhada) * 7;
+    let adicional = (dinheiro * 0.2) + dinheiro;
+    let adicional2 = (dinheiro * 0.3) + dinheiro;
+    (hora <= 45) ? alert(`Não houve adicional, esse é o dinheiro que você recebe por semana: R$ ${dinheiro.toFixed(2).replace(".",",")}`) :
+    (hora <= 60 && hora > 45) ? alert(`Houve um aumento de 20%, R$ ${adicional.toFixed(2).replace(".",",")} no seu salário`) : 
+    (hora > 60) ? alert(`Houve um aumento de 30%, R$ ${adicional2.toFixed(2).replace(".",",")} no seu salário`) : alert(`Dados inválidos.`);
 
     
     //Saída
